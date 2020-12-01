@@ -1,0 +1,28 @@
+#header a.logo {
+    margin-bottom: -4px !important;
+}
+
+#header-wrapper {
+    box-sizing: border-box;
+    height: 146px;
+}
+
+#header.fixed {
+    position: fixed;
+    z-index: 100;
+
+    left: 0;
+    top: 0;
+    right: 0;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 20px 0;
+
+    box-shadow: 0 0 15px -5px #ddd;
+}
+
+
+@media screen and (max-width: 768px) {
+
+}
