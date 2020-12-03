@@ -21,3 +21,42 @@
 
     box-shadow: 0 0 15px -5px #ddd;
 }
+
+#up-to-top {
+    position: fixed;
+    z-index: 50;
+
+    width: 54px;
+    height: 54px;
+
+    cursor: pointer;
+    border-radius: 500px;
+
+    right: 30px;
+    bottom: 30px;
+
+    background: #fff;
+    box-shadow: 0 0 15px -5px #999;
+
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+#up-to-top.visible {
+    display: flex;
+}
+#up-to-top img {
+    width: 22px;
+    height: 22px;
+    display: block;
+
+    transform: rotate(90deg);
+}
+
+@media screen and (max-width: 768px) {
+    #up-to-top {
+        right: 20px;
+        bottom: 20px;
+    }
+}

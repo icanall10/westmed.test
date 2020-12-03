@@ -18,11 +18,30 @@
             })
             .trigger('checkFixed');
 
+
+        $('#up-to-top')
+            .once()
+            .on('checkVisible', function () {
+                var $this = $(this);
+                var scrollTop = $(window).scrollTop();
+
+                (scrollTop > 500) ? $this.addClass('visible') : $this.removeClass('visible');
+            })
+            .trigger('checkVisible')
+            .click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 600);
+
+                return false;
+            });
+
     }
 
 
     $(window).scroll(function () {
         $('#header').trigger('checkFixed');
+        $('#up-to-top').trigger('checkVisible');
     });
 
 
